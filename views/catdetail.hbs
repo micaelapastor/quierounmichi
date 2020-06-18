@@ -104,7 +104,7 @@
                 url: "/contactform",
                 type: "post",
                 data: values,
-                beforeSend: function () {
+                beforeSend: function () { // Cuando hago click en enviar, antes de conectar
                     $form.html('<div class="spinner-border text-light" role="status"><span class="sr-only">Cargando...</span></div>');
                 },
                 success: function (response) {

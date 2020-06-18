@@ -30,7 +30,9 @@ client.connect(function (err, db) { // Conectamos a Mongo
   dbo = db.db("qumichi"); // Selecionamos la database, mantenemos el objeto en la variable dbo para su uso posterior
 });
 
-app.get('/', (req, res) => {
+// Ruteo
+
+app.get('/', (req, res) => { // Home // Request y Response
   dbo.collection("cats").find().toArray((err, items) => {
     if (err) throw err;
     res.render('index', { layout: false, cats: items });
@@ -67,7 +69,7 @@ app.get('/admin/newcat', (req, res) => {
   res.render('newcat');
 });
 
-app.post('/admin/newcat', upload.single('photo'), (req, res) => {
+app.post('/admin/newcat', upload.single('photo'), (req, res) => { // Middleware multer que sirve para manejar archivos enviados
   var michi = { name: req.body.name, desc: req.body.desc, age: req.body.age, breed: req.body.breed };
 
   dbo.collection("cats").insertOne(michi, function (err, docsInserted) {
