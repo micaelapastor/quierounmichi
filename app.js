@@ -8,7 +8,7 @@ const mongo = require('mongodb'); // Dependencia para la conexión a base de dat
 const app = express(); // Creación de la instancia de express
 const upload = multer({ dest: 'uploads/' });
 
-const url = "mongodb+srv://mica11:FhergvrVPoaLSNfb@mica-bsys9.gcp.mongodb.net/qumichi?retryWrites=true&w=majority"; // Definición de la URL MongoDB
+const url = ""; // Definición de la URL MongoDB
 const client = new mongo.MongoClient(url, { useUnifiedTopology: true }); // Creación del cliente de MongoDB
 
 const hbs = exphbs.create({ // Definición de la configuración para Handlebars
