@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-12">
+
+            <h3>Solicitudes de contacto</h3>
+
+            <table class="table table-hover mt-3">
+                <thead>
+                    <tr>
+                        <th scope="col">Gato</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Telefono</th>
+                        <th scope="col">Mensaje</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each contact}}
+                    <tr>
+                        <td>{{catdesc}}</td>
+                        <td>{{name}}</td>
+                        <td>{{email}}</td>
+                        <td>{{phone}}</td>
+                        <td>{{message}}</td>
+                        <td>
+                            <a href="/admin/deletecontact/{{_id}}" class="text-danger">Borrar</a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

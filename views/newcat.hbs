@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-6">
+
+            <h3>Nuevo gato</h3>
+
+            <form class="mt-4" method="POST" enctype="multipart/form-data" action="/admin/newcat">
+                <div class="form-group">
+                    <label for="inputName">Nombre</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Nombre del gato" name="name" maxlength="25" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputDesc">Descripción</label>
+                    <textarea class="form-control" id="inputDesc" rows="5" name="desc" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputBreed">Raza</label>
+                    <input type="text" class="form-control" id="inputBreed" placeholder="Raza" name="breed" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputAge">Edad</label>
+                    <input type="text" class="form-control" id="inputAge" placeholder="Edad" name="age" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputPhoto">Subir foto del gato</label>
+                    <input type="file" class="form-control-file" id="inputPhoto" name="photo" accept="image/x-png,image/jpeg" required>
+                </div>
+
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>                
+
+            </form>
+
+        </div>
+    </div>
+</div>

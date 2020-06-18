@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-6">
+
+            <h3>Gatos</h3>
+
+            <table class="table table-hover mt-3">
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Edad</th>
+                        <th scope="col">Raza</th>
+                        <th scope="col">Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each cats}}
+                    <tr>
+                        <td>{{name}}</td>
+                        <td>{{age}}</td>
+                        <td>{{breed}}</td>
+                        <td>
+                            <a href="/admin/deletecat/{{_id}}" class="text-danger">Borrar</a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
